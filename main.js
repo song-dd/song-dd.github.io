@@ -103,6 +103,9 @@ const groupTitle = document.getElementById('groupTitle');
 const backBtn = document.getElementById('backBtn');
 const memberModal = document.getElementById('memberModal');
 const closeModal = document.getElementById('closeModal');
+const contactBtn = document.getElementById('contactBtn');
+const contactModal = document.getElementById('contactModal');
+const closeContact = document.getElementById('closeContact');
 const modalImage = document.getElementById('modalImage');
 const modalName = document.getElementById('modalName');
 const modalInfo = document.getElementById('modalInfo');
@@ -172,6 +175,20 @@ closeModal.addEventListener('click', () => {
 memberModal.addEventListener('click', (e) => {
   if (e.target === memberModal) {
     memberModal.classList.add('hidden');
+  }
+});
+
+contactBtn.addEventListener('click', () => {
+  contactModal.classList.remove('hidden');
+});
+
+closeContact.addEventListener('click', () => {
+  contactModal.classList.add('hidden');
+});
+
+contactModal.addEventListener('click', (e) => {
+  if (e.target === contactModal) {
+    contactModal.classList.add('hidden');
   }
 });
 

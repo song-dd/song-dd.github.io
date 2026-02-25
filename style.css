@@ -17,22 +17,30 @@ body.light {
   color: #1a1a1a;
 }
 
-#themeToggle {
+#themeToggle, #contactBtn {
   position: fixed;
   top: 20px;
-  right: 20px;
   padding: 12px 24px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
   font-weight: 600;
   z-index: 1000;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-#themeToggle:hover {
+#themeToggle {
+  right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#contactBtn {
+  right: 180px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+#themeToggle:hover, #contactBtn:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
@@ -271,5 +279,99 @@ body.light .modal-content p {
   
   .member-card img {
     height: 180px;
+  }
+}
+
+.contact-modal {
+  max-width: 450px;
+  padding: 30px;
+}
+
+.contact-modal h2 {
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+body.light .contact-modal h2 {
+  color: #1a1a1a;
+}
+
+.contact-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-modal input,
+.contact-modal textarea {
+  padding: 14px 18px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+body.light .contact-modal input,
+body.light .contact-modal textarea {
+  background: #f5f5f5;
+  color: #1a1a1a;
+  border-color: #ddd;
+}
+
+.contact-modal input:focus,
+.contact-modal textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.contact-modal textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+#closeContact {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+#closeContact:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #contactBtn {
+    right: 150px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  
+  #themeToggle {
+    padding: 10px 16px;
+    font-size: 0.9rem;
   }
 }
