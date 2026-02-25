@@ -215,6 +215,16 @@ body.light .group-card {
   position: relative;
   height: 220px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-card .group-icon {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .group-card img {
@@ -319,10 +329,18 @@ body.light .member-card {
   box-shadow: var(--shadow-hover);
 }
 
-.member-card img {
+.member-card .member-avatar {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-card .member-avatar span {
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .member-card .member-info {
