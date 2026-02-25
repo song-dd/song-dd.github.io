@@ -36,8 +36,8 @@ body.light {
 }
 
 #contactBtn {
-  right: 180px;
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  position: static;
 }
 
 #themeToggle:hover, #contactBtn:hover {
@@ -380,4 +380,265 @@ body.light .contact-modal textarea {
   max-width: 1200px;
   margin: 60px auto 40px;
   padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+body.light .navbar {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+body.light .nav-links a {
+  color: #1a1a1a;
+}
+
+.nav-links a:hover {
+  color: #667eea;
+}
+
+.navbar #themeToggle {
+  position: static;
+}
+
+.content-page {
+  max-width: 900px;
+  margin: 120px auto 60px;
+  padding: 40px;
+}
+
+.content-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content-page section {
+  margin-bottom: 40px;
+}
+
+.content-page h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #667eea;
+}
+
+.content-page h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f093fb;
+}
+
+.content-page p {
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+body.light .content-page p {
+  color: #555;
+}
+
+.content-page ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-page ul li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  color: #aaa;
+}
+
+body.light .content-page ul li {
+  color: #666;
+}
+
+.content-page ul li::before {
+  content: "•";
+  color: #667eea;
+  position: absolute;
+  left: 0;
+}
+
+.content-page .last-update {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light .content-page .last-update {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header {
+  padding-top: 100px;
+}
+
+.header-desc {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #888;
+}
+
+footer {
+  background: #0a0a0a;
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+}
+
+body.light footer {
+  background: #e0e0e0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light .footer-content {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #667eea;
+}
+
+.footer-section p {
+  color: #888;
+  line-height: 1.6;
+}
+
+body.light .footer-section p {
+  color: #555;
+}
+
+.footer-section a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+body.light .footer-section a {
+  color: #555;
+}
+
+.footer-section a:hover {
+  color: #667eea;
+}
+
+.footer-section button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.footer-section button:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .navbar #themeToggle {
+    position: static;
+  }
+  
+  .content-page {
+    margin-top: 180px;
+    padding: 20px;
+  }
+  
+  .content-page h1 {
+    font-size: 1.8rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
