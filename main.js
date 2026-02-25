@@ -105,6 +105,7 @@ const memberModal = document.getElementById('memberModal');
 const closeModal = document.getElementById('closeModal');
 const modalImage = document.getElementById('modalImage');
 const modalName = document.getElementById('modalName');
+const modalRole = document.getElementById('modalRole');
 const modalInfo = document.getElementById('modalInfo');
 const contactBtn = document.getElementById('contactBtn');
 const contactModal = document.getElementById('contactModal');
@@ -124,10 +125,13 @@ themeToggle.addEventListener('click', () => {
 function renderGroups() {
   groupsGrid.innerHTML = kpopGroups.map(group => `
     <div class="group-card" onclick="showMembers(${group.id})">
-      <img src="${group.image}" alt="${group.name}" onerror="this.src='https://placehold.co/300x200/667eea/ffffff?text=${group.name}'">
+      <div class="image-wrapper">
+        <img src="${group.image}" alt="${group.name}" onerror="this.src='https://placehold.co/320x220/667eea/ffffff?text=${group.name}'">
+      </div>
       <div class="group-info">
         <h3>${group.name}</h3>
-        <p>${group.description}</p>
+        <p class="group-desc">${group.description}</p>
+        <span class="member-count">👤 ${group.members.length}명</span>
       </div>
     </div>
   `).join('');
@@ -155,9 +159,10 @@ function showMemberDetail(memberName) {
   const member = currentGroup.members.find(m => m.name === memberName);
   modalImage.src = member.image;
   modalImage.onerror = function() {
- 'https://place    this.src =hold.co/200x250/667eea/ffffff?text=' + member.name;
+    this.src = 'https://placehold.co/200x250/667eea/ffffff?text=' + member.name;
   };
   modalName.textContent = `${member.koreanName} (${member.name})`;
+  modalRole.textContent = member.role;
   modalInfo.textContent = member.info;
   memberModal.classList.remove('hidden');
 }

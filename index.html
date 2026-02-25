@@ -17,17 +17,19 @@
       <a href="/about.html">사이트 소개</a>
       <a href="/privacy.html">개인정보처리방침</a>
     </div>
-    <button id="themeToggle">🌙 다크모드</button>
+    <div class="nav-actions">
+      <button id="themeToggle" class="nav-btn theme-btn">🌙 다크모드</button>
+      <button id="contactBtn" class="nav-btn contact-btn-nav">📩 제휴 문의</button>
+    </div>
   </nav>
 
   <header>
     <h1>K-POP Artist Gallery</h1>
-    <p>다양한 케이팝 아티스트들을 만나보세요</p>
-    <p class="header-desc">BTS, BLACKPINK, TWICE, EXO, NewJeans, SEVENTEEN 등 국내외 케이팝 그룹의 상세 정보를 확인하세요.</p>
+    <p class="subtitle">BTS, BLACKPINK, TWICE, EXO, NewJeans, SEVENTEEN 등 국내외 케이팝 그룹의 상세 정보를 확인하세요</p>
   </header>
 
   <main id="groupsPage">
-    <div class="section-title">
+    <div class="section-header">
       <h2>인기 K-POP 그룹</h2>
       <p>원하는 그룹을 클릭하여 멤버 정보를 확인하세요</p>
     </div>
@@ -40,18 +42,20 @@
     <div class="members-grid" id="membersGrid"></div>
   </main>
 
-  <div id="memberModal" class="modal hidden">
+<div id="memberModal" class="modal hidden">
     <div class="modal-content">
-      <span id="closeModal">&times;</span>
+      <button id="closeModal">&times;</button>
       <img id="modalImage" src="" alt="">
       <h3 id="modalName"></h3>
+      <p class="modal-role" id="modalRole"></p>
       <p id="modalInfo"></p>
     </div>
+  </div>
   </div>
 
   <div id="contactModal" class="modal hidden">
     <div class="modal-content contact-modal">
-      <span id="closeContact">&times;</span>
+      <button id="closeContact">&times;</button>
       <h2>제휴 문의</h2>
       <form action="https://formspree.io/f/xojnyogk" method="POST">
         <input type="text" name="name" placeholder="이름" required>
@@ -65,19 +69,19 @@
 
   <footer>
     <div class="footer-content">
-      <div class="footer-section">
+      <div class="footer-brand">
         <h3>K-POP Artist Gallery</h3>
-        <p>케이팝 팬들을 위한 정보 공유 플랫폼입니다.</p>
+        <p>케이팝 팬들을 위한 정보 공유 플랫폼입니다.<br>다양한 K-POP 아티스트들의 정보를 확인하세요.</p>
       </div>
-      <div class="footer-section">
+      <div class="footer-links">
         <h4>바로가기</h4>
         <a href="/">홈</a>
         <a href="/about.html">사이트 소개</a>
         <a href="/privacy.html">개인정보처리방침</a>
       </div>
-      <div class="footer-section">
+      <div class="footer-contact">
         <h4>연락처</h4>
-        <button id="contactBtn">📩 제휴 문의</button>
+        <a href="mailto:contact@kpop-gallery.com">contact@kpop-gallery.com</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -100,6 +104,6 @@
       (d.head || d.body).appendChild(s);
     })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <noscript>Please enable JavaScript to view the <a href=".com/?ref_nhttps://disqusoscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
