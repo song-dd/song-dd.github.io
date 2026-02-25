@@ -1,16 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Funny Farting Character</title>
+  <title>K-POP Artist Gallery</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
   <button id="themeToggle">🌙 다크모드</button>
-  <h1>버튼을 눌러 캐릭터를 춤추게 하세요!</h1>
-  <button id="danceButton">춤춰라!</button>
-  <img id="characterImage" src="https://i.imgur.com/v33133L.png" alt="Funny Character" style="width: 300px; height: 300px;">
-  <script defer type="text/javascript" src="/main.js"></script>
+  
+  <header>
+    <h1>K-POP Artist Gallery</h1>
+    <p>다양한 케이팝 아티스트들을 만나보세요</p>
+  </header>
+
+  <main id="groupsPage">
+    <div class="groups-grid" id="groupsGrid"></div>
+  </main>
+
+  <main id="membersPage" class="hidden">
+    <button id="backBtn">← 그룹 목록으로</button>
+    <h2 id="groupTitle"></h2>
+    <div class="members-grid" id="membersGrid"></div>
+  </main>
+
+  <div id="memberModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <h3 id="modalName"></h3>
+      <p id="modalInfo"></p>
+    </div>
+  </div>
+
+  <script src="/main.js"></script>
 </body>
 </html>
