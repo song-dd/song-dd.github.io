@@ -375,3 +375,9 @@ body.light .contact-modal textarea {
     font-size: 0.9rem;
   }
 }
+
+#disqus_thread {
+  max-width: 1200px;
+  margin: 60px auto 40px;
+  padding: 20px;
+}
